@@ -1,0 +1,5 @@
+apps/microservices/services/migrator/micro/lib/migrations/revisions
+.gitlab-ci-tests.yml
+docker-compose.gitlab.yml
+.force_tests
+tools/utf
