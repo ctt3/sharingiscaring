@@ -1,0 +1,31 @@
+
+
+.login-page
+	.row.login-container
+		.col-xs-6.offset-xs-3
+			.login-box
+				.logo-title
+					.logo
+				.login-form
+					= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+						= devise_error_messages!
+						.fields
+							.field
+								= f.email_field :email, autofocus: true, placeholder: 'Email'
+							.field
+								= f.password_field :password, autocomplete: 'off', placeholder: 'Password'
+
+							.field
+								= f.password_field :password_confirmation, autocomplete: 'off', placeholder: 'Confirm Password'
+								- if @minimum_password_length
+									%em.minimum_characters (#{@minimum_password_length} characters minimum)
+
+						= f.submit 'Sign Up'
+
+						.login-link
+							= link_to 'Log In', new_session_path(resource_name)
+						.login-link
+							= link_to 'Forgot Password', new_password_path(resource_name)
+
+						.terms-conditions
+							By signing up, you agree to the terms and conditions.

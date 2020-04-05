@@ -8,14 +8,19 @@
 					.logo
 				.login-form
 					= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+						= devise_error_messages!
 						.fields
 							.field
 								= f.email_field :email, autofocus: true, placeholder: 'Email'
 							.field
 								= f.password_field :password, autocomplete: 'off', placeholder: 'Password'
 
-						= f.submit 'Log in'
-						.forgot-password-link
-							= link_to 'Forgot your password?', new_password_path(resource_name)
-						.terms-conditions
-							By logging in, you agree to the terms and conditions.
+						= f.submit 'Log In'
+
+				.login-link
+					= link_to 'Sign Up', new_registration_path(resource_name)
+				.login-link
+					= link_to 'Forgot Password', new_password_path(resource_name)
+
+				.terms-conditions
+					By logging in, you agree to the terms and conditions.
