@@ -1,0 +1,21 @@
+
+
+.login-page
+	.row.login-container
+		.col-xs-6.offset-xs-3
+			.login-box
+				.logo-title
+					.logo
+				.login-form
+					= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+						.fields
+							.field
+								= f.email_field :email, autofocus: true, placeholder: 'Email'
+							.field
+								= f.password_field :password, autocomplete: 'off', placeholder: 'Password'
+
+						= f.submit 'Log in'
+						.forgot-password-link
+							= link_to 'Forgot your password?', new_password_path(resource_name)
+						.terms-conditions
+							By logging in, you agree to the terms and conditions.

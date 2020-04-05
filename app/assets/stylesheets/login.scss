@@ -1,0 +1,101 @@
+@import "variables";
+
+
+
+.login-page {
+	background: image-url('gray-concrete-post-tunnel-1531677.jpg') no-repeat #ffffff center;
+	background-size: cover;
+	height: 100vh;
+
+	.login-container {
+		height: 100vh;
+		align-items: center;
+		justify-content: center;
+		display: flex;
+
+		.login-box {
+			padding: 20px;
+			position: relative;
+			float: right;
+			top: 50%;
+			background-color: #ffffff;
+			border-radius: 10px;
+			border: 1px #000000;
+
+			.logo-title {
+				text-align: center;
+			}
+
+			.login-form {
+
+				.fields {
+					margin: 0 14px;
+
+					.field {
+						margin-bottom: 10px;
+
+						.icon {
+							float: left;
+							height: 30px;
+							width: 30px;
+							min-height: 30px;
+							min-width: 30px;
+							background-color: #00bcd8;
+							border-radius: 8px 0 0 8px;
+						}
+
+						input {
+							display: block;
+							width: calc(100% - 50px);
+							border: none;
+							outline: none;
+							margin: 0 0 0 30px;
+							height: 30px;
+							padding: 0 10px 0 10px;
+							border-radius: 0 8px 8px 0;
+
+							&:focus {
+								border: none;
+								outline: none;
+							}
+
+							&:-webkit-autofill {
+								-webkit-box-shadow: 0 0 0 30px white inset;
+							}
+						}
+					}
+				}
+
+				input[type=submit] {
+					display: block;
+					padding: 10px 20px 10px 20px;
+					background-color: #f37a4a;
+					font-size: 16px;
+					margin: 20px auto;
+					border: none;
+					border-radius: 8px;
+					color: #ffffff;
+					cursor: pointer;
+				}
+
+				.forgot-password-link{
+					display: block;
+					text-align: center;
+
+					a {
+						text-decoration: none;
+						color: $site-base-font-color;
+						font-size: 16px;
+					}
+				}
+
+				.terms-conditions {
+					color: $site-base-font-color;
+					font-size: 10px;
+					margin: 10px 0 0 0;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
