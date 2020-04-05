@@ -1,9 +1,8 @@
+
 @import "variables";
 
-
-
 .login-page {
-	background: image-url('gray-concrete-post-tunnel-1531677.jpg') no-repeat #ffffff center;
+	background: image-url($login-bg-img) no-repeat #ffffff center;
 	background-size: cover;
 	height: 100vh;
 
@@ -24,6 +23,12 @@
 
 			.logo-title {
 				text-align: center;
+
+				.logo {
+					background: image-url($logo-img) no-repeat #ffffff center;
+					width: 300px;
+					height: 90px;
+				}
 			}
 
 			.login-form {
@@ -33,16 +38,6 @@
 
 					.field {
 						margin-bottom: 10px;
-
-						.icon {
-							float: left;
-							height: 30px;
-							width: 30px;
-							min-height: 30px;
-							min-width: 30px;
-							background-color: #00bcd8;
-							border-radius: 8px 0 0 8px;
-						}
 
 						input {
 							display: block;
